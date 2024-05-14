@@ -13,16 +13,16 @@ Initial_params = dict(DataBase_directory = "E:\Bazy_Danych\MNIST_Data",
 
 #If train_dataset_multiplier set to one then there is no augmentation
 Augment_params = dict(reduced_set_size = None,
-                      dataset_multiplier = 3,
+                      dataset_multiplier = 1,
                       flipRotate = False,
-                      randBright = True,
-                      gaussian_noise = True,
+                      randBright = False,
+                      gaussian_noise = False,
                       denoise = False,
                       contour = False
                       )
 
 
-Model_parameters = dict(model_architecture = "SimpleMnist",
+Model_parameters = dict(model_architecture = "EfficientNetB1",
                         device = "GPU:0",
                         train = True,
                         epochs = 30,
@@ -30,7 +30,7 @@ Model_parameters = dict(model_architecture = "SimpleMnist",
                         batch_size = 128,
                         min_delta = 0.0001,
                         evaluate = True,
-                        show_architecture = False
+                        show_architecture = True
                        )
 
 
